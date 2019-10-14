@@ -14,6 +14,7 @@ public class Feature {
   Long beginViewingDate;
   Long endViewingDate;
   String missionName;
+  String quicklook;
 
   public static final Attribute<Feature, UUID> ID = new SimpleAttribute<>("featureId") {
     @Override
@@ -22,7 +23,7 @@ public class Feature {
     }
   };
 
-  public static final Attribute<Feature, Long> TIMESTAMP = new SimpleAttribute<Feature, Long>() {
+  public static final Attribute<Feature, Long> TIMESTAMP = new SimpleAttribute<>("timestamp") {
     @Override
     public Long getValue(Feature o, QueryOptions queryOptions) {
       return o.getTimestamp();

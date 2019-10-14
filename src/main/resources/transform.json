@@ -7,10 +7,11 @@
           "properties": {
             "id": "[&4].id",
             "timestamp": "[&4].timestamp",
+            "quicklook": "[&4].quicklook",
             "acquisition": {
               "endViewingDate": "[&5].endViewingDate",
               "beginViewingDate": "[&5].beginViewingDate",
-              "mission": "[&5].mission"
+              "mission": "[&5].missionName"
             }
           }
         }
