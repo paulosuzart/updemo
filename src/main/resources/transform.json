@@ -1,0 +1,20 @@
+[{
+  "operation": "shift",
+  "spec": {
+    "*": {
+      "features": {
+        "*": {
+          "properties": {
+            "id": "id",
+            "timestamp": "timestamp",
+            "acquisition": {
+              "endViewingDate": "endViewingDate",
+              "beginViewingDate": "beginViewingDate",
+              "mission": "mission"
+            }
+          }
+        }
+      }
+    }
+  }
+}]
