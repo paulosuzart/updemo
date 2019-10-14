@@ -21,4 +21,11 @@ public class Feature {
       return o.id;
     }
   };
+
+  public static final Attribute<Feature, Long> TIMESTAMP = new SimpleAttribute<Feature, Long>() {
+    @Override
+    public Long getValue(Feature o, QueryOptions queryOptions) {
+      return o.getTimestamp();
+    }
+  };
 }

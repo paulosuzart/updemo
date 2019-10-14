@@ -5,12 +5,12 @@
       "features": {
         "*": {
           "properties": {
-            "id": "id",
-            "timestamp": "timestamp",
+            "id": "[&4].id",
+            "timestamp": "[&4].timestamp",
             "acquisition": {
-              "endViewingDate": "endViewingDate",
-              "beginViewingDate": "beginViewingDate",
-              "mission": "mission"
+              "endViewingDate": "[&5].endViewingDate",
+              "beginViewingDate": "[&5].beginViewingDate",
+              "mission": "[&5].mission"
             }
           }
         }
