@@ -57,7 +57,7 @@ The spec below can be customized to accommodate new fields or different sources:
 
 After data is transformed, it's loaded into a [CQEngine](https://github.com/npgall/cqengine) [ConcurrentIndexedCollection](http://htmlpreview.github.io/?http://raw.githubusercontent.com/npgall/cqengine/master/documentation/javadoc/apidocs/com/googlecode/cqengine/ConcurrentIndexedCollection.html). Two attributes are used for indexing:
 
-```
+```java
   // The id is indexe through a Unique Index
   public static final Attribute<Feature, UUID> ID = new SimpleAttribute<>("featureId") {
     @Override
@@ -88,6 +88,15 @@ As there's no other dependency other the application jar itself, it's quite simp
 ```
 
 Then browse to [Swagger](http://localhost:8080/swagger-ui.html) or issue your http requests to `http://localhost:8080/features`.
+
+## General notes
+
+I tried to pretend I was doing git for real, but there's no CI then some commits went straight to master. Other then that I created couple branches that are in the history. Then they were squashed to master.
+
+Tests are trivial, mostly happy path. No Data Providers or intricate mocks and `verifies`.
+
+It took me much more than 3 hours especially because I spent 3 hours trying to understando how this JOLT spec worked and din't want to fallback to another solution like couchbase that would open the door to many of the topics in the first session.
+
 
 
    
