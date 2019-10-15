@@ -10,8 +10,10 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.Resource;
 
+@Slf4j
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public class CollectionLoader {
 
@@ -19,14 +21,20 @@ public class CollectionLoader {
 
 
   List<Feature> transform(final Resource source) throws IOException {
+    log.info("Trying to load collection from {}", source.getFilename());
     var input = JsonUtils.jsonToList(source.getInputStream());
 
     var transformed = chainr.transform(input);
     var mapper = new ObjectMapper();
-    return ((List<Map<String, Object>>) transformed)
+
+    var raw = ((List<Map<String, Object>>) transformed)
       .stream()
       .map(entry -> mapper.convertValue(entry, Feature.class))
       .collect(Collectors.toList());
+
+    log.info("Loaded {} records from the provided source", raw.size());
+
+    return raw;
 
   }
 
