@@ -1,12 +1,14 @@
 package com.ps.updemo.controller;
 
 import com.ps.updemo.model.Feature;
+import io.swagger.annotations.ApiModel;
 import java.util.UUID;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
+@ApiModel(value = "Feature", description = "Represents a Feature being served")
 public class FeatureDTO {
 
   UUID id;

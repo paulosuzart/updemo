@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
@@ -16,7 +17,14 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 
   @Bean
   public Docket api() {
+    var info = new ApiInfoBuilder()
+      .description("Simple Feature API")
+      .title("Feature API")
+      .version("0.0.1")
+      .build();
+
     return new Docket(DocumentationType.SWAGGER_2)
+      .apiInfo(info)
       .select()
       .apis(RequestHandlerSelectors.basePackage("com.ps.updemo.controller"))
       .paths(PathSelectors.any())
