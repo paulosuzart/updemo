@@ -11,7 +11,7 @@
             "acquisition": {
               "endViewingDate": "[&5].endViewingDate",
               "beginViewingDate": "[&5].beginViewingDate",
-              "mission": "[&5].missionName"
+              "missionName": "[&5].missionName"
             }
           }
         }
