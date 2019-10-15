@@ -85,6 +85,7 @@ As there's no other dependency other the application jar itself, it's quite simp
 
 ```$bash
  UPDEMO_SOURCE=file:///Users/paulosuzart/Downloads/source-data.json ./mvnw spring-boot:run
+ # It loads /tmp/source-data.json by default
 ```
 
 Then browse to [Swagger](http://localhost:8080/swagger-ui.html) or issue your http requests to `http://localhost:8080/features`.
