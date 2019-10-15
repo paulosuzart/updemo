@@ -81,7 +81,7 @@ Also, data is stored as is in memory and could be served as is by keeping the `q
  
 # Running
 
-As there's no other dependency other the application jar itself, it's quite simple:
+As there's no other dependency other the application jar itself, it's quite simple if you have **Java 12**:
 
 ```$bash
  UPDEMO_SOURCE=file:///Users/paulosuzart/Downloads/source-data.json ./mvnw spring-boot:run
