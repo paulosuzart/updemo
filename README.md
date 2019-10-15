@@ -70,7 +70,7 @@ After data is transformed, it's loaded into a [CQEngine](https://github.com/npga
   public static final Attribute<Feature, Long> TIMESTAMP = new SimpleAttribute<>("timestamp") {
     @Override
     public Long getValue(Feature o, QueryOptions queryOptions) {
-      return o.getTimestamp();
+      return o.timestamp;
     }
   };
 ```

@@ -26,7 +26,7 @@ public class Feature {
   public static final Attribute<Feature, Long> TIMESTAMP = new SimpleAttribute<>("timestamp") {
     @Override
     public Long getValue(Feature o, QueryOptions queryOptions) {
-      return o.getTimestamp();
+      return o.timestamp;
     }
   };
 }
